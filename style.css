@@ -1,0 +1,443 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+body {
+    font-family: 'Alata', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
+}
+
+/* Background image for logo, nav, and hero */
+.background-image {
+    background-image: url('./images/desktop/background.jpg'); /* Add your background image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: hsl(0, 0%, 100%); /* White text color over the background */
+}
+
+/* Header styles */
+header {
+    padding: 0; /* Remove padding from header */
+    position: relative; /* Position relative to allow absolute positioning */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Add horizontal padding for spacing */
+    position: absolute; /* Position nav absolutely to adjust its placement */
+    top: 0; /* Align to the top of the header */
+    left: 0;
+    right: 0;
+}
+
+/* Logo with background */
+.logo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    color: hsl(0, 0%, 100%); /* White text for visibility */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: hsl(0, 0%, 75%);
+}
+
+.nav-toggle {
+    display: none; /* Hide the menu button on larger screens */
+}
+
+/* Hero section */
+.hero {
+    background-image: url('./images/desktop/background.jpg'); /* Use the same background image here */
+    background-size: cover;
+    background-position: center;
+    font-size: 1.5;
+    background-repeat: no-repeat;
+    text-align: left;
+    padding: 100px 20px;
+    
+    color: hsl(0, 0%, 100%); /* White text over background */
+}
+
+.hero h2 {
+    font-weight: 400; /* Regular weight for the body */
+    
+}
+
+/* Main section styles */
+section {
+    padding: 60px 20px;
+    text-align: left;
+    
+}
+.about-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; /* Ensure the image and text align to the left */
+    margin: 20px 0;
+}
+
+.about-image {
+    width: 65%; /* Cover more than half the width */
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+    object-fit: cover;
+}
+
+.about-text {
+    position: absolute;
+    bottom: 0px; /* Position it near the bottom of the image */
+    right: 20px; /* Position it near the right side of the image */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%; /* Adjust the width of the text box */
+}
+
+.about-text h2 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    color: hsl(0, 0%, 0%); /* Black text for contrast */
+}
+
+.about-text p {
+    font-size: 1em;
+    color: hsl(0, 0%, 20%);
+    line-height: 1.6;
+}
+
+
+h2 {
+    color: hsl(0, 0%, 0%);
+    font-weight: 400; /* Regular weight for headings */
+}
+
+/* Header h2 styling */
+header h2 {
+    text-align: left;
+    color: hsl(0, 0%, 100%); /* White text color */
+    border: 2px solid hsl(0, 0%, 100%); /* White border */
+    padding: 10px; /* Add some padding for spacing */
+    display: inline-block; /* To wrap the border around the text */
+    margin: 0; /* Remove any default margin */
+    margin-left: 20px; /* Adjust this value to move the h2 closer to the left side */
+    font-size: 2em; /* Increase font size */
+}
+
+/* Adjusted styles for the creations title and button */
+.creations-title {
+    display: inline-block; /* Allow it to sit next to the button */
+    color: hsl(0, 0%, 0%);
+    font-weight: 400; /* Regular weight for headings */
+    margin-right: 15px; /* Space between the heading and button */
+    margin-left: 0; /* Ensure it touches the left margin */
+}
+
+/* Button styling */
+.see-all {
+    background: hsl(228, 45%, 44%); /* Button background color */
+    color: hsl(0, 0%, 100%); /* White text color */
+    padding: 10px 15px; /* Padding around the button text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size for button */
+    transition: 0.3s; /* Smooth transition for hover effect */
+    float: right; /* Align button to the right */
+}
+
+/* Creation styles */
+.creations-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    gap: 20px;
+}
+
+.creation {
+    position: relative; /* Position relative for absolute positioning of text */
+    overflow: hidden; /* Hide overflow for the text overlay */
+}
+
+.creation img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+.creation h3 {
+    position: absolute; /* Position text over image */
+    bottom: 10px; /* Adjust to place at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: hsl(0, 0%, 100%); /* White text color */
+    padding: 10px; /* Padding around text */
+    border-radius: 5px; /* Rounded corners */
+    text-align: left;
+}
+
+/* Footer styling */
+footer {
+    background-color: hsl(0, 0%, 10%); /* Dark background for footer */
+    color: hsl(0, 0%, 100%); /* White text */
+    padding: 40px 20px; /* Padding around the footer */
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 20px;
+    color: hsl(0, 0%, 100%);
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+
+    padding: 0;
+}
+
+footer ul li a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: hsl(0, 0%, 75%);
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    align-items: right;
+    margin-bottom: 20px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Ensure icons are white */
+    transition: filter 0.3s;
+}
+
+.social-icons a img:hover {
+    filter: brightness(0.7); /* Darken icons on hover */
+}
+
+footer p {
+    font-size: 0.875rem;
+    color: hsl(0, 0%, 75%);
+}
+
+
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-content {
+        margin-bottom: 10px;
+    }
+
+/* Base styles */
+.nav-list {
+    display: none; /* Hide by default */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex; /* Show the toggle button */
+        justify-content: space-between; /* Space between menu and close icons */
+        background: none; /* No background */
+        border: none; /* No border */
+        cursor: pointer; /* Change cursor to pointer */
+        align-items: center; /* Center icons vertically */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon in mobile view */
+    }
+
+    .close-icon {
+        display: none; /* Hide close icon initially */
+    }
+
+    .nav-list.active {
+        display: block; /* Show the navigation list when active */
+        position: absolute; /* Position it absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        background-color: black; /* Black background */
+        padding: 20px; /* Padding for the menu */
+        z-index: 10; /* Ensure it overlays other elements */
+    }
+
+    .nav-list.active + .nav-toggle .menu-icon {
+        display: none; /* Hide menu icon when nav is active */
+    }
+
+    .nav-list.active + .nav-toggle .close-icon {
+        display: block; /* Show close icon when nav is active */
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none; /* Hide the toggle button on desktop */
+    }
+
+    .nav-list {
+        display: flex; /* Show nav-list in desktop */
+        position: static; /* Normal positioning */
+        background-color: transparent; /* No background */
+        padding: 0; /* No padding */
+    }
+
+    .close-icon {
+        display: none; /* Hide close icon in desktop view */
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .about-container {
+        display: block; /* Ensure elements stack vertically */
+        text-align: center; /* Center align text */
+    }
+
+    .about-image {
+        width: 100%; /* Make the image full width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensures the image is treated as a block element */
+        margin: 0; /* No margin around the image */
+    }
+
+    .about-text {
+        width: 90%; /* Adjust width for mobile */
+        margin: 20px auto 0; /* Center align text and add top margin */
+        padding: 15px; /* Add padding for readability */
+        background-color: rgba(255, 255, 255, 0.9); /* Optional: White background with slight transparency */
+        border-radius: 8px; /* Optional: Rounded corners */
+        text-align: justify; /* Justify text for a neat look */
+    }
+
+    .about-text h2 {
+        font-size: 1.8em; /* Adjust heading size for mobile */
+        margin-bottom: 10px; /* Space below heading */
+    }
+
+    .about-text p {
+        font-size: 0.9em; /* Adjust paragraph size for mobile */
+        line-height: 1.4; /* Increase line height for readability */
+    }
+}
+
+
+
+    
+    /* Adjust "Our Creation" heading and button */
+    .creations-title {
+        text-align: center; /* Ensure the title is centered */
+        font-size: 1.5em; /* Adjust title size for mobile */
+        margin: 20px 0; /* Add margin for spacing */
+    }
+
+    .creations-list {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .see-all {
+        display: block; /* Ensure button is displayed */
+        margin: 20px auto; /* Center the button */
+        padding: 8px 12px; /* Adjust padding */
+        font-size: 0.9em; /* Smaller font size for mobile */
+        text-align: center; /* Center text inside the button */
+    }
+
+    /* Footer - center all elements */
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    footer h3, footer ul, .social-icons, footer p {
+        text-align: center;
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* CTA button styles */
+.cta {
+    background: hsl(228, 45%, 44%);
+    color: hsl(0, 0%, 100%);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta:hover {
+    background: hsl(228, 45%, 36%);
+}
