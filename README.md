@@ -1,6 +1,7 @@
 # Frontend Mentor - Loopstudios landing page
 
 ##RESULT OF THE CHALLENGE (OUTPUT)
+  https://www.frontendmentor.io/solutions/mtm6404-frontend-mentor-your-github-kumarnavin-FtqazWkhjL
 
 *DESKTOP VIEW
 
